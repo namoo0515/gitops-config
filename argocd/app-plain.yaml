@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: spring-boot-plane
+  name: spring-boot-plain
   namespace: argocd           # Application 은 항상 argocd 네임스페이스에 생성
   finalizers:
     # App 삭제 시 관련 k8s 리소스도 함께 삭제 (cascade delete)
@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/namoo0515/gitops-config
     targetRevision: main
-    path: apps/spring-boot/plane    # 매니페스트 파일들이 있는 경로
+    path: apps/spring-boot/plain    # 매니페스트 파일들이 있는 경로
   destination:
     server: https://kubernetes.default.svc    # 현재 클러스터 (로컬)
     namespace: spring-boot-dev
