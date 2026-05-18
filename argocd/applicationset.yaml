@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/your-org/gitops-config
+        repoURL: https://github.com/namoo0515/gitops-config
         revision: main
         directories:
           - path: apps/spring-boot/overlays/*
@@ -17,7 +17,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/your-org/gitops-config
+        repoURL: https://github.com/namoo0515/gitops-config
         targetRevision: main
         path: "{{path}}"
       destination:
